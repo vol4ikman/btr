@@ -5,14 +5,13 @@
     } else {
         $header_banner_src = '';
     }
-    $page_title              = get_the_title();
+    $page_title = get_the_title();
 ?>
 
 <section class="section header-banner-section">
-    <div class="header-banner-inner">
-        <img src="<?php echo $header_banner_src; ?>" alt="<?php echo $page_title; ?>">
+    <div class="header-banner-inner" style="background:url(<?php echo $header_banner_src; ?>) no-repeat top center;">        
         <div class="header-banner-title">
-            <div class="row">
+            <div class="row row-1280">
                 <div class="large-12 columns">
                     <h1><?php echo $page_title; ?></h1>
                 </div>

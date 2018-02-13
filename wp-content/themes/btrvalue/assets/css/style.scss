@@ -605,12 +605,19 @@ h4,h5,h6 {
     display: none;
 }
 
+.page-template-tpl-about {
+    .header-banner-inner {
+        min-height: 554px;
+    }
+}
+
 .header-banner-inner {
     position: relative;
+    min-height: 617px;
     .header-banner-title {
         position: absolute;
         width: 100%;
-        bottom:10px;
+        bottom:55px;
         right:0;
         h1 {
             font-size:83px;
@@ -620,4 +627,105 @@ h4,h5,h6 {
             color: $dark_blue;
         }
     }
+}
+
+.row-1405 {
+    max-width: 1435px;
+}
+.row-1362{
+    max-width: 1392px;
+}
+.row-1280 {
+    max-width: 1310px;
+}
+.service-accordion {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+
+.header-banner-section {
+    margin-bottom: 22px;
+}
+
+.accordion-item {
+    background: #fdfbf4;
+    border-bottom:3px solid #f4ebcc;
+    padding:35px 50px 70px 50px;
+    margin-bottom: 28px;
+    @include trans(250ms);
+    &.is-active {
+        background: #0e1554;
+        border-bottom:3px solid $gold;
+        .accordion-service-title,
+        .accordion-service-title a,
+        .accordion-content-wrapper {
+            color: $white;
+        }
+        .accordion-content-hidden {
+            height: auto !important;
+        }
+
+    }
+    .accordion-service-title {
+        a {
+            font-weight: bold;
+            font-size:30px;
+            color: $dark_blue;
+            margin:0 0 22px 0;
+            line-height: 1;
+        }
+    }
+    .accordion-content-wrapper {
+        font-size:19px;
+        font-weight:400;
+        color: $dark_blue;
+        .accordion-content-visibile {
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .accordion-content-hidden {
+            height: 0;
+            @include trans(250ms);
+            overflow: hidden;
+        }
+    }
+}
+
+.top-about-section {
+    h2 {
+        text-align: center;
+        font-size: 39px;
+        color: $dark_blue;
+        line-height: 1;
+        font-weight: bold;
+        margin:0 0 35px 0;
+    }
+    .top-about-description {
+        font-size: 26px;
+        margin-bottom: 70px;
+        color: #686868;
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .about-content {
+        color: #686868;
+        font-size:18px;
+        p {
+            line-height: 1.6;
+            margin-bottom: 50px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.about-team-row {
+    margin-top: 90px;
 }

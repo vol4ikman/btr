@@ -2,6 +2,8 @@ jQuery(document).ready(function(){
 
     init_home_slider();
 
+    service_list_accordion();
+
     jQuery(document).foundation();
 
     new WOW().init();
@@ -16,6 +18,13 @@ jQuery(window).load(function() {
     jQuery('.off-canvas-list > .menu-item-has-children').addClass('vertical menu');
     loadingHome();
 });
+
+function service_list_accordion(){
+    jQuery(document).on('click', '.accordion-service-title a', function(e){
+        e.preventDefault();
+        jQuery(this).parents('.accordion-item').toggleClass('is-active');
+    });
+}
 
 function init_home_slider(){
     if( jQuery('.home-slider').length ){
